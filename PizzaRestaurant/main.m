@@ -7,17 +7,37 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "global.h"
 #import "Kitchen.h"
+#import "FirstManager.h"
+#import "SecondManager.h"
+
+PizzaSize pizzaSizeHelper(NSString* sizeString) {
+    PizzaSize size = Large;
+    
+    if([sizeString isEqualToString:@"small"]) {
+        size = Small;
+    } else if([sizeString isEqualToString:@"medium"]) {
+        size = Medium;
+    } else if([sizeString isEqualToString:@"large"]) {
+        size = Large;
+    }
+    
+    return size;
+}
 
 int main(int argc, const char * argv[])
 {
-
+//    small ham pineapple cheese
     @autoreleasepool {
         
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        FirstManager *firstManager = [FirstManager new];
+        SecondManager *secondManager = [SecondManager new];
+        
+        NSInteger turn = 0;
         
         while (TRUE) {
             // Loop forever
@@ -35,10 +55,20 @@ int main(int argc, const char * argv[])
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
             // And then send some message to the kitchen...
+            if(turn%2 == 0){
+                restaurantKitchen.delegate =  firstManager;
+            } else {
+                restaurantKitchen.delegate =  secondManager;
+            }
             
+            NSString *size = commandWords.firstObject;
+            NSArray *toppings = [commandWords subarrayWithRange:NSMakeRange(1, commandWords.count - 1)];
             
+            PizzaSize pizzaSize = pizzaSizeHelper(size);
             
+            [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
             
+            turn += 1;
             
         }
 

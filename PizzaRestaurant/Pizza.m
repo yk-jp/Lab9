@@ -13,17 +13,10 @@
     NSArray *_toppings;
 }
 
--(instancetype) initWithSize: (NSString*) size toppings: (NSArray*) toppings {
+-(instancetype) initWithSize: (PizzaSize) size toppings: (NSArray*) toppings {
     self = [super init];
     if(self) {
-        if([size isEqualToString:@"small"]) {
-            _size = Small;
-        } else if([size isEqualToString:@"medium"]) {
-            _size = Medium;
-        } else if([size isEqualToString:@"large"]) {
-            _size = Large;
-        }
-        
+        _size = size;
         _toppings = toppings;
         
     }
