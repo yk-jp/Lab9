@@ -11,6 +11,7 @@
 #import "Kitchen.h"
 #import "FirstManager.h"
 #import "SecondManager.h"
+#import "DeliveryService.h"
 
 PizzaSize pizzaSizeHelper(NSString* sizeString) {
     PizzaSize size = Large;
@@ -34,6 +35,7 @@ int main(int argc, const char * argv[])
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        DeliveryService *deliveryService = [DeliveryService new];
         FirstManager *firstManager = [FirstManager new];
         SecondManager *secondManager = [SecondManager new];
         
@@ -65,8 +67,13 @@ int main(int argc, const char * argv[])
             NSArray *toppings = [commandWords subarrayWithRange:NSMakeRange(1, commandWords.count - 1)];
             
             PizzaSize pizzaSize = pizzaSizeHelper(size);
+            Pizza *pizza = [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
             
-            [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
+            if(pizza != nil) {
+                [deliveryService deliverPizza:pizza];
+            }
+            
+            [deliveryService records];
             
             turn += 1;
             

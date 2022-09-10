@@ -13,7 +13,7 @@
 }
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings {
-    return [toppings containsObject:@"anchovies"];
+    return ![toppings containsObject:@"anchovies"];
 }
 
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen {

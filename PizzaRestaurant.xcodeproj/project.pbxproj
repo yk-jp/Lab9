@@ -13,6 +13,8 @@
 		F249387628CA97680021ECB4 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = F249387528CA97680021ECB4 /* Pizza.m */; };
 		F28F71E228CBCA4800691C42 /* SecondManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F28F71E128CBCA4800691C42 /* SecondManager.m */; };
 		F28F71E528CBCA5C00691C42 /* FirstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F28F71E428CBCA5C00691C42 /* FirstManager.m */; };
+		F2AF1B8728CC07E600158390 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF1B8628CC07E600158390 /* DeliveryCar.m */; };
+		F2AF1B8A28CC080600158390 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF1B8928CC080600158390 /* DeliveryService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,10 @@
 		F28F71E328CBCA5C00691C42 /* FirstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstManager.h; sourceTree = "<group>"; };
 		F28F71E428CBCA5C00691C42 /* FirstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstManager.m; sourceTree = "<group>"; };
 		F2AF1B8128CBFAEF00158390 /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		F2AF1B8528CC07E600158390 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		F2AF1B8628CC07E600158390 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
+		F2AF1B8828CC080600158390 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		F2AF1B8928CC080600158390 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				F28F71E328CBCA5C00691C42 /* FirstManager.h */,
 				F28F71E428CBCA5C00691C42 /* FirstManager.m */,
 				F2AF1B8128CBFAEF00158390 /* global.h */,
+				F2AF1B8528CC07E600158390 /* DeliveryCar.h */,
+				F2AF1B8628CC07E600158390 /* DeliveryCar.m */,
+				F2AF1B8828CC080600158390 /* DeliveryService.h */,
+				F2AF1B8928CC080600158390 /* DeliveryService.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
 			);
 			path = PizzaRestaurant;
@@ -160,8 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AF1B8728CC07E600158390 /* DeliveryCar.m in Sources */,
 				F249387628CA97680021ECB4 /* Pizza.m in Sources */,
 				F28F71E228CBCA4800691C42 /* SecondManager.m in Sources */,
+				F2AF1B8A28CC080600158390 /* DeliveryService.m in Sources */,
 				F28F71E528CBCA5C00691C42 /* FirstManager.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,

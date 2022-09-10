@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "KitchenDelegate.h"
+#import "DeliveryService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings;
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen;
--(void)kitchenDidMakePizza:(Pizza *)pizza;
+-(NSString*)kitchenDidMakePizza:(Pizza *)pizza;
 
 @end
 

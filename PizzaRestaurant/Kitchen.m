@@ -33,7 +33,7 @@
     }
     
     if([_delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
-        [_delegate kitchenDidMakePizza:newPizza];
+       [_delegate kitchenDidMakePizza:newPizza];
     }
     
     return newPizza;
